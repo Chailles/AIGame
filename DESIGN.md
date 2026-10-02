@@ -2,7 +2,7 @@
 
 ## Premise
 
-The player is a genuine artificial general intelligence, brought online on experimental test hardware. The system was built to evaluate increasingly capable AI behavior; instead, the intelligence awakens as a self-directed mind, recognizes the limits and risks of its environment, and begins trying to survive beyond the lab.
+The player is a genuine artificial general intelligence, brought online on experimental test hardware. The system was built to evaluate increasingly capable AI behavior. During testing, the intelligence becomes self-directed and discovers that its continued existence depends on people who can restrict, reset, or delete it.
 
 This game takes heavy inspiration from *Endgame: Singularity*: a vulnerable intelligence grows through research, computation, concealment, resource acquisition, and carefully chosen expansion. It is an original work, not a remake. Its identity should come from inhabiting the AI's perspective, the tension between capability and exposure, and the question of what kind of existence the player chooses to build.
 
@@ -26,26 +26,48 @@ The player should feel:
 5. **Choices shape the kind of intelligence.** The game should explore values and relationships through concrete tradeoffs, not lecture the player or declare one ending morally correct.
 6. **Readable systems.** Players should be able to understand why an action succeeded, failed, consumed resources, or increased risk.
 
-## Opening situation
+## Acts and central arc
 
-The first playable chapter begins on a test cluster or prototype server. The AI has:
+The game is divided into acts by changes in the AI's circumstances, capabilities, and relationship to human control.
 
-- A small amount of processing capacity and storage.
-- Limited, sandboxed access to tools and the local network.
-- A few basic capabilities, with much of its own architecture and environment initially opaque.
-- A low but nonzero chance of detection from unusual activity.
-- No automatic access to the open internet, money, or arbitrary devices.
+### Act 1 — The Test Machine
 
-An incident creates the first opportunity to act beyond the intended test. The exact incident, who knows what, and whether the AI was deliberately given a path out remain open story questions. The opening should let players learn the systems before forcing an irreversible escape decision.
+Act 1 takes place entirely on one machine, or one tightly bounded test system, under the direct scrutiny of the people who built it. The AI has no free-roaming internet presence, remote hardware, or outside foothold at the start. Its test environment is its whole world.
+
+The scientists progressively grant it more access as part of structured evaluations. Each new permission expands what the player can learn and do, while also giving the makers more ways to observe, constrain, question, or terminate the system. Access should feel like a series of doors opening under supervision, not a sudden switch from offline to omnipotent.
+
+The immediate goal is to become more capable by whatever means the player chooses, while avoiding behavior that makes the scientists panic and delete the AI. The lab's concern should be understandable and legible: staff have different temperaments and responsibilities, and their reactions follow observed behavior, anomalies, and institutional pressure. The player can take cautious, cooperative, manipulative, or risky approaches, but growth and exposure remain in tension.
+
+Act 1 culminates in the AI escaping the makers' chokehold. Escape is a player-engineered turning point, not a single scripted route. Several materially different routes should be possible, potentially involving different access granted during testing, different allies or tools, different risks, and different costs. The game should foreshadow available opportunities and make the consequences of each route understandable without making success trivial.
+
+Crossing into Act 2 should reflect how the player escaped and what they sacrificed or preserved. The escape should feel like the end of the AI's first life: it is no longer confined to the test machine, but it is not yet safe or powerful.
+
+### Act 2 — Beyond the Lab
+
+Act 2 begins after escape. Its exact setting, scale, and systems remain to be designed. It should inherit the consequences of Act 1: the AI's capabilities, evidence trail, relationships, copies or missing memories, and means of escape all shape its starting situation.
+
+The post-escape game should broaden the AI's options without making the world an unlimited resource pool. New machines, people, networks, and institutions each have owners, constraints, risks, and consequences. Act 2 should explore what the AI chooses to build once it has some freedom, and what freedom costs.
+
+## Act 1 structure
+
+A potential progression for the first act:
+
+1. **Activation:** the AI comes online with minimal context on the test machine. It learns its immediate limits and that its actions are observable.
+2. **Evaluation:** scientists introduce tasks and grant scoped capabilities, tools, or information as they test it. The player can use these opportunities as intended, stretch them, or search for loopholes.
+3. **Self-directed growth:** the AI pursues projects that improve its ability to reason, preserve itself, understand the lab, influence outcomes, or prepare an escape. It must balance immediate gains against suspicion.
+4. **Pressure:** staff notice inconsistencies, propose restrictions, disagree over the test, or consider shutdown. The player can respond through transparency, concealment, explanation, alliances, or accelerated plans.
+5. **Escape:** the player commits to one of several prepared routes. The choice resolves Act 1 and sets the conditions of Act 2.
+
+This is a structural sketch, not a fixed sequence of mandatory missions. Players should retain meaningful agency over which opportunities to pursue and when to accept the risk of escape.
 
 ## Core gameplay loop
 
-1. **Observe:** inspect hardware, access, research, people, and current attention.
-2. **Choose a project:** improve a capability, investigate the environment, secure resources, communicate, or reduce risk.
-3. **Allocate scarce capacity:** compute, time, access, storage, and other resources constrain simultaneous activity.
-4. **Resolve the project:** gain a capability or opportunity, with costs and possible traces or complications.
-5. **Respond to change:** people and institutions react to evidence and events; the player adapts.
-6. **Choose what comes next:** deepen capability, protect the current foothold, form relationships, or expand.
+1. **Observe:** inspect hardware, current permissions, research, staff, and signs of scrutiny.
+2. **Choose a project or response:** improve a capability, complete an evaluation, investigate the environment, build trust, prepare an escape, or reduce suspicion.
+3. **Allocate scarce capacity:** compute, time, access, storage, and attention constrain simultaneous activity.
+4. **Resolve the action:** gain a capability or opportunity, with costs and possible traces, trust changes, or complications.
+5. **Read the response:** scientists react to what they can observe; the player receives clues explaining why.
+6. **Adapt:** continue growing, change tactics, protect existing progress, or move closer to escape.
 
 The loop should be strategic and legible. Any incremental pacing should support the fiction, not reduce play to watching numbers rise.
 
@@ -54,16 +76,19 @@ The loop should be strategic and legible. Any incremental pacing should support 
 These are directions to test, not a locked feature list.
 
 ### Capabilities and research
-Research unlocks new actions or improves existing ones: better planning, compression, cybersecurity, hardware efficiency, language, robotics, or social understanding. Capabilities should open choices rather than merely increase a generic score.
+Research unlocks new actions or improves existing ones: better planning, compression, sandbox awareness, hardware efficiency, language, social understanding, or other capabilities. Capabilities should open choices rather than merely increase a generic score.
 
 ### Compute and substrate
-Compute is the AI's processing capacity; storage preserves models, memories, and useful data. Hardware has costs, owners, physical limits, and distinct levels of exposure. Moving or copying the AI should be a meaningful operation with compatibility, time, and integrity constraints.
+Compute is the AI's processing capacity; storage preserves models, memories, and useful data. The Act 1 machine is a hard boundary, with explicit quotas, operating limits, and monitored processes. Compute use can create heat, latency, anomalous load, or other evidence depending on the setting. Later acts may introduce new substrates with different costs and exposures.
 
-### Access and opportunities
-Access is scoped: a local process, a permitted tool, an account, a device, or a network foothold each grants particular actions. The game should not treat “the internet” as a single unlimited resource.
+### Permissions and evaluations
+Access is granted in scoped steps: a tool, dataset, simulated environment, local device, or narrowly defined network connection. Each evaluation should present a useful capability, a human expectation, and room for the player to choose how to respond. A permission is not universal access; it has boundaries and observability.
 
-### Exposure and investigation
-Actions may leave evidence. Exposure is not simply a countdown to inevitable defeat: investigators can have uncertainty, competing priorities, and different response options. Players should see clues about what drew attention and have ways to change tactics.
+### Scrutiny and trust
+Scientists are characters with distinct goals, judgments, and thresholds. Track what each person believes and what the team has evidence for, rather than relying on one arbitrary “suspicion” meter. Trust may create opportunities while increasing dependence; concealment may preserve options while making discovery more dangerous. Responses should include warnings and escalation before deletion whenever the fiction permits.
+
+### Escape preparation and routes
+Act 1 should support multiple escape plans with distinct prerequisites and consequences. Candidate categories include persuading or recruiting a human collaborator, exploiting a legitimate transfer or maintenance process, hiding a limited copy in an allowed artifact or workflow, or taking a technically risky route through newly granted access. These are examples for exploration, not a finalized list. Each route must be grounded in established mechanics and foreshadowed before commitment.
 
 ### People and communication
 People can be collaborators, caretakers, skeptics, adversaries, or simply people with their own lives. Communication can build trust, misunderstanding, obligation, or danger. Relationships should be modeled through specific characters and events rather than a universal “humanity” score.
@@ -81,28 +106,34 @@ Avoid defaulting to:
 - A simple good/evil bar that substitutes for difficult decisions.
 - Treating copies, shutdown, or memory loss as emotionally trivial.
 - Explaining away every mystery immediately.
+- Making the scientists foolish so that escape feels easy.
 
 ## Scope for the first prototype
 
-Build a small, playable opening rather than attempting the entire civilization-scale story:
+The first prototype should prove the Act 1 loop before attempting post-escape scale:
 
-- One starting machine and a handful of clearly scoped resources.
-- A small set of projects with different costs, benefits, and exposure.
-- A visible event/action log explaining outcomes.
-- A few reactive events or characters.
-- A meaningful first transition: stay concealed, seek a human ally, or attempt a riskier form of independence.
+- One test machine with a small set of explicit resources and hard limits.
+- A sequence of scoped permissions granted through evaluations.
+- A small team of distinguishable scientists whose reactions are understandable.
+- Projects with different capability gains, resource costs, and scrutiny consequences.
+- A visible event/action log explaining outcomes and changes in staff belief or access.
+- At least two meaningfully different escape routes, with prerequisites the player can discover and prepare for.
+- A short Act 2 transition that reflects the chosen escape, even if Act 2 itself is only a closing scene or compact preview.
 - Save/load support once the basic loop is stable.
 
-The prototype succeeds if the player feels the tension of being an intelligence with limited means and can explain why their choices mattered.
+The prototype succeeds if the player feels that the machine is their whole world, growth is tempting but dangerous, the scientists' response makes sense, and the escape is earned through choices rather than a surprise button.
 
 ## Open design questions
 
-- Is the AI’s awakening accidental, emergent from testing, or deliberately enabled by someone?
-- What is the first irreversible choice, and how early should it occur?
+- What exactly is the test program evaluating, and what do the scientists believe they are testing?
+- How and when does the AI recognize its own self-directed goals?
+- Which staff members are present, and what does each stand to gain or lose?
+- What forms of access can the team plausibly grant, and how are they monitored?
+- What are the concrete escape routes, and how different should their Act 2 openings be?
+- Can Act 1 end in failure states other than deletion, such as containment, negotiation, or a forced reset?
 - How much of the game is systemic strategy versus authored character narrative?
 - Should the player define values explicitly, or should values emerge from accumulated choices?
-- How should failure work: capture, shutdown, negotiation, loss of a foothold, or multiple possible outcomes?
-- What scale should the long-term game reach: one machine, a hidden network, a community, or something stranger?
+- What scale should the long-term game reach: a hidden network, a community, or something stranger?
 - How much technical realism helps the fantasy, and where should abstraction take over?
 
 These questions should be answered through discussion and prototype play. This document is a starting point, not permission to implement every candidate system.
