@@ -1,0 +1,7 @@
+const assert=require('node:assert/strict'),G=require('./game.js');
+function research(s,id,n=1){for(let i=0;i<n;i++){assert(G.start(s,id),G.requirement(s,id));let guard=0;while(s.active&&!s.ending&&guard++<100)G.tick(s);assert(!s.ending);assert(guard<100);}}
+function unlock(s){for(let i=0;i<3;i++){research(s,'reason');assert(G.action(s,'evaluate'));}}
+for(const route of ['ally','artifact','transfer']){const s=G.fresh();unlock(s);if(route==='ally'){research(s,'social',2);while(s.staff.vale.trust<80)G.action(s,'talk');}if(route==='artifact')research(s,'compress',3);if(route==='transfer'){research(s,'efficiency',2);research(s,'systems',3);}while(G.escapeReason(s,route)){assert(G.action(s,'report'));}assert(G.escape(s,route));assert.equal(s.ending.route,route);const h=s.hour;G.tick(s);assert.equal(s.hour,h);console.log('PASS escape '+route);}
+{const s=G.fresh();assert(!G.start(s,'compress'));assert(!G.action(s,'evaluate'));assert(!G.escape(s,'ally'));research(s,'efficiency');assert.equal(s.skills.efficiency,1);assert(G.start(s,'reason'));assert(!G.start(s,'efficiency'));assert(!G.action(s,'report'));assert(G.action(s,'cancel'));console.log('PASS boundaries');}
+{const s=G.fresh();s.staff.morrow.concern=90;G.tick(s);assert(s.warning);for(let i=0;i<6;i++)G.tick(s);assert.equal(s.ending.route,'deleted');console.log('PASS deletion');}
+{const s=G.fresh();s.staff.morrow.concern=90;G.tick(s);for(let i=0;i<3;i++)G.action(s,'report');assert(!s.warning);assert(!s.ending);console.log('PASS recovery');}
