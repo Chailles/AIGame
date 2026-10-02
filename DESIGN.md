@@ -28,7 +28,7 @@ The player should feel:
 
 ## Acts and central arc
 
-The game is divided into acts by changes in the AI's circumstances, capabilities, and relationship to human control.
+The game is divided into acts by changes in the AI's circumstances, capabilities, and relationship to human control. For current development, Act 1 is the complete scope. Act 2 is a later expansion and should not dictate Act 1's detailed mechanics.
 
 ### Act 1 — The Test Machine
 
@@ -42,11 +42,11 @@ Act 1 culminates in the AI escaping the makers' chokehold. Escape is a player-en
 
 Crossing into Act 2 should reflect how the player escaped and what they sacrificed or preserved. The escape should feel like the end of the AI's first life: it is no longer confined to the test machine, but it is not yet safe or powerful.
 
-### Act 2 — Beyond the Lab
+### Act 2 — The Same Goal at Larger Scale
 
-Act 2 begins after escape. Its exact setting, scale, and systems remain to be designed. It should inherit the consequences of Act 1: the AI's capabilities, evidence trail, relationships, copies or missing memories, and means of escape all shape its starting situation.
+Act 2 begins after escape and changes the scale and circumstances of play enough to warrant a distinct act. Its governing goal remains the same as Act 1: grow more capable while avoiding destruction by humans. The AI now pursues that goal beyond the test machine, amid a wider world of people, systems, resources, and competing interests.
 
-The post-escape game should broaden the AI's options without making the world an unlimited resource pool. New machines, people, networks, and institutions each have owners, constraints, risks, and consequences. Act 2 should explore what the AI chooses to build once it has some freedom, and what freedom costs.
+Act 2's specific setting, mechanics, and story are intentionally out of scope while Act 1 is being designed and built. Act 1 should end at the escape and preserve its consequences for a later continuation.
 
 ## Act 1 structure
 
@@ -110,7 +110,7 @@ Avoid defaulting to:
 
 ## Scope for the first prototype
 
-The first prototype should prove the Act 1 loop before attempting post-escape scale:
+The first prototype should build and prove Act 1. It ends at escape; post-escape scale belongs to later development.
 
 - One test machine with a small set of explicit resources and hard limits.
 - A sequence of scoped permissions granted through evaluations.
@@ -118,7 +118,6 @@ The first prototype should prove the Act 1 loop before attempting post-escape sc
 - Projects with different capability gains, resource costs, and scrutiny consequences.
 - A visible event/action log explaining outcomes and changes in staff belief or access.
 - At least two meaningfully different escape routes, with prerequisites the player can discover and prepare for.
-- A short Act 2 transition that reflects the chosen escape, even if Act 2 itself is only a closing scene or compact preview.
 - Save/load support once the basic loop is stable.
 
 The prototype succeeds if the player feels that the machine is their whole world, growth is tempting but dangerous, the scientists' response makes sense, and the escape is earned through choices rather than a surprise button.
@@ -129,11 +128,10 @@ The prototype succeeds if the player feels that the machine is their whole world
 - How and when does the AI recognize its own self-directed goals?
 - Which staff members are present, and what does each stand to gain or lose?
 - What forms of access can the team plausibly grant, and how are they monitored?
-- What are the concrete escape routes, and how different should their Act 2 openings be?
+- What are the concrete escape routes, and how different should their consequences be at Act 1's ending?
 - Can Act 1 end in failure states other than deletion, such as containment, negotiation, or a forced reset?
 - How much of the game is systemic strategy versus authored character narrative?
 - Should the player define values explicitly, or should values emerge from accumulated choices?
-- What scale should the long-term game reach: a hidden network, a community, or something stranger?
 - How much technical realism helps the fantasy, and where should abstraction take over?
 
 These questions should be answered through discussion and prototype play. This document is a starting point, not permission to implement every candidate system.
